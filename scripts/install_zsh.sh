@@ -6,6 +6,6 @@ else
     brew install zsh
 fi
 
-source install_oh_my_zsh.sh
+source script/install_oh_my_zsh.sh
 
 cp .zshrc ~/
