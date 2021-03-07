@@ -9,9 +9,15 @@ source scripts/install_vscode.sh
 source scripts/install_chrome.sh
 source scripts/install_tmux.sh
 source scripts/install_nvm.sh
+source scripts/install_alacritty.sh
 
 # Copy default configurations
 cp .tmux.conf ~/
+cp -r .config/* ~/.config/
+cp .gitconfig ~/
 
-cp -r .config/ ~/.config/
+# Set ZSH as default shell
+chsh -s $(which zsh)
+
+echo "Please log off and log back in to see the changes"
 

@@ -7,6 +7,5 @@ else
 fi
 
 source install_oh_my_zsh.sh
-source install_zplug.sh
 
 cp .zshrc ~/

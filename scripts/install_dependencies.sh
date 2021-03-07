@@ -14,7 +14,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         lldb \
         git \
         curl \
-        autotools \
         software-properties-common \
         apt-transport-https \
         ssh \
