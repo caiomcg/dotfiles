@@ -9,7 +9,6 @@ source scripts/install_vscode.sh
 source scripts/install_chrome.sh
 source scripts/install_tmux.sh
 source scripts/install_nvm.sh
-source scripts/install_alacritty.sh
 
 # Copy default configurations
 cp .tmux.conf ~/
