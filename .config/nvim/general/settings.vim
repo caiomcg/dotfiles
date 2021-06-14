@@ -27,13 +27,32 @@ set shortmess+=c
 set signcolumn=yes
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set modifiable
+set autoindent
 syntax on
 colorscheme gruvbox
 
-" Indent on save
+" Indent on save for rust, cpp, c and javascript
 augroup autoindent
     au!
-    autocmd BufWritePre * :normal migg=G`i
+    " Uncomment the line below to enable autosave to all files
+    " autocmd BufWritePre * :normal migg=G`i
+    autocmd BufWritePre *.c :normal migg=G`i
+    autocmd BufWritePre *.h :normal migg=G`i
+    autocmd BufWritePre *.cpp :normal migg=G`i
+    autocmd BufWritePre *.cxx :normal migg=G`i
+    autocmd BufWritePre *.cc :normal migg=G`i
+    autocmd BufWritePre *.hpp :normal migg=G`i
+
+    autocmd BufWritePre *.sh :normal migg=G`i
+    autocmd BufWritePre *.rs :normal migg=G`i
+    autocmd BufWritePre *.js :normal migg=G`i
+    autocmd BufWritePre *.ts :normal migg=G`i
+    autocmd BufWritePre *.html :normal migg=G`i
+    autocmd BufWritePre *.sh :normal migg=G`i
+    autocmd BufWritePre *.json :normal migg=G`i
+    " autocmd BufWritePre *.py :normal migg=G`i
+    " THE COMMAND ABOVE IS DISABLE BECAUSE IT IS LAGGY ON LARGE FILES (NVIM
+    " only)
 augroup End
 
 autocmd FileType c ClangFormatAutoEnable
@@ -122,5 +141,10 @@ let g:startify_custom_header = [
             \ '/_/|_/|___/_/_/_/_/',
             \]
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable
+nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
 
+nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?

@@ -22,7 +22,7 @@ Plug 'majutsushi/tagbar'
 " Show memento of a file
 Plug 'mbbill/undotree'
 " Gruvbox theme
-Plug 'gruvbox-community/gruvbox'
+Plug 'caiomcg/gruvbox'
 " Nerdtree pretty icons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Dev Icons
@@ -58,7 +58,16 @@ Plug 'rhysd/vim-clang-format'
 Plug 'editorconfig/editorconfig-vim'
 " JS Syntax highlight
 Plug 'pangloss/vim-javascript'
-
+" Better git experience
+Plug 'tpope/vim-fugitive'
+" Toml highlight
+Plug 'cespare/vim-toml'
+" Python PEP8 syntax
+Plug 'Vimjas/vim-python-pep8-indent'
+" Smooth scroll
+Plug 'psliwka/vim-smoothie'
+" Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Finish vim plug execution
 call plug#end()
 

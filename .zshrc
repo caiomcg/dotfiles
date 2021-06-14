@@ -24,7 +24,7 @@ ZSH_TMUX_AUTOQUIT=false
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$HOME/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin
+export PATH=$HOME/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:$HOME/.local/bin
 
 alias ls="ls --color"
 alias la="ls -a"
@@ -44,6 +44,6 @@ export TERM=xterm-256color
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/var/lib/snapd/snap/bin:$PATH"
 export PATH="/snap/bin:$PATH"
-
+export PATH="/usr/local/go/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
