@@ -3,7 +3,7 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Update references
     sudo apt-get update -y
-    
+
     # Install executables
     sudo apt-get -y install \
         wget
@@ -20,5 +20,5 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt-get -f install
 
 else
-    echo "Skipping chrome installation"
+    brew install --cask google-chrome
 fi
