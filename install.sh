@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 source scripts/install_dependencies.sh
 source scripts/install_fonts.sh
 source scripts/install_zsh.sh
@@ -12,7 +13,7 @@ source scripts/install_nvm.sh
 
 # Copy default configurations
 cp .tmux.conf ~/
-cp -r .config/* ~/.config/
+cp -r .config ~/.config/
 cp .gitconfig ~/
 
 # Set ZSH as default shell

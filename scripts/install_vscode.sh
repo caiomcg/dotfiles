@@ -14,6 +14,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     sudo apt install code
 else
-    brew cask install visual-studio-code
+    brew install --cask visual-studio-code
 fi
 

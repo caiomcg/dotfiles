@@ -3,7 +3,7 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Update references
     sudo apt-get update -y
-    
+
     # Install executables
     sudo apt-get -y install \
         build-essential \
@@ -25,6 +25,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         libopus-dev
 
 else
-    brew install tmux clang clang-format
+    brew install tmux
+    brew install ssh
 fi
 
