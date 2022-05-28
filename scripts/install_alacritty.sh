@@ -17,5 +17,5 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     compile
 
 else
-    brew install alacritty
+    brew install --cask alacritty
 fi

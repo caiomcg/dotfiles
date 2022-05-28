@@ -4,6 +4,6 @@
 [credential]
     helper = store
 [core]
-	editor = /usr/bin/nvim
+    editor = /usr/bin/nvim
 [http]
-	postBuffer = 1048576000
+    postBuffer = 1048576000

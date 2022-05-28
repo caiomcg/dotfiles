@@ -6,25 +6,15 @@ SOLARIZED_THEME="dark"
 
 KEYTIMEOUT=1
 
-plugins=(
-    git
-    pip
-    python 
-    z
-    osx
-    tmux
-    zsh-autosuggestions 
-    zsh-syntax-highlighting
-    zsh-completions
-    #fast-syntax-highlighting
-)
+plugins=(git pip python zsh-autosuggestions z zsh-syntax-highlighting macos tmux)
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$HOME/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:$HOME/.local/bin
+export PATH=$HOME/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin
+export PATH=/opt/homebrew/bin:$PATH
 
 alias ls="ls --color"
 alias la="ls -a"

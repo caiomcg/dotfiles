@@ -3,7 +3,7 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Update references
     sudo apt-get update -y
-    
+
     # Remove previous docker
     sudo apt-get remove docker docker-engine docker.io containerd runc
 
@@ -19,8 +19,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     # Add from stable
     echo \
-      "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-      $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+        "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
     # Install
     sudo apt-get update
@@ -30,5 +30,5 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     sudo chmod +x /usr/local/bin/docker-compose
 else
-    echo "Skipping docker installation"
+    brew install --cask docker
 fi

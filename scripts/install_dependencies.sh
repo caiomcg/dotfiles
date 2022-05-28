@@ -26,6 +26,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         libopus-dev
 
 else
-    brew install tmux clang clang-format
+    brew install tmux
+    brew install ssh
 fi
 
