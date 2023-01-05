@@ -3,10 +3,9 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="gruvbox"
 SOLARIZED_THEME="dark"
-
 KEYTIMEOUT=1
 
-plugins=(git pip python zsh-autosuggestions z zsh-syntax-highlighting macos tmux)
+plugins=(git pip python zsh-autosuggestions z zsh-syntax-highlighting macos tmux docker docker-compose)
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
@@ -22,8 +21,8 @@ alias l="ls -alF"
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
-alias r='ranger'
 alias clang-format='clang-format-7'
+alias tmux-sessionizer='.config/tmux/tmux-sessionizer'
 
 export EDITOR=vim
 
@@ -34,6 +33,8 @@ export TERM=xterm-256color
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/var/lib/snapd/snap/bin:$PATH"
 export PATH="/snap/bin:$PATH"
-export PATH="/usr/local/go/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
