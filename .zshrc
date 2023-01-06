@@ -5,6 +5,7 @@ ZSH_THEME="gruvbox"
 SOLARIZED_THEME="dark"
 KEYTIMEOUT=1
 
+TERM=xterm-256color
 plugins=(git pip python zsh-autosuggestions z zsh-syntax-highlighting macos tmux docker docker-compose)
 
 ZSH_TMUX_AUTOSTART=true
