@@ -80,6 +80,19 @@ function packer.trytoconfigure()
     -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+    -- AutoPair code
+    use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- Change surroundings
+    use 'tpope/vim-surround'
+
+    -- Custom marks
+    use 'chentoast/marks.nvim'
+
+
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
