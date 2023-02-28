@@ -106,10 +106,21 @@ _G.packer_plugins = {
     path = "/Users/caiomcg/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["editorconfig-vim"] = {
+    loaded = true,
+    path = "/Users/caiomcg/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
+    url = "https://github.com/editorconfig/editorconfig-vim"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/Users/caiomcg/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
+  },
+  ["flit.nvim"] = {
+    config = { "\27LJ\2\nt\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\tkeys\1\0\2\14multiline\2\18labeled_modes\6v\1\0\4\6T\6T\6F\6F\6t\6t\6f\6f\nsetup\tflit\frequire\0" },
+    loaded = true,
+    path = "/Users/caiomcg/.local/share/nvim/site/pack/packer/start/flit.nvim",
+    url = "https://github.com/ggandor/flit.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -264,6 +275,10 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0+\2\2\0B\0\2\1K\0\1\0\25add_default_mappings\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
+-- Config for: flit.nvim
+time([[Config for flit.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\tkeys\1\0\2\14multiline\2\18labeled_modes\6v\1\0\4\6T\6T\6F\6F\6t\6t\6f\6f\nsetup\tflit\frequire\0", "config", "flit.nvim")
+time([[Config for flit.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of telescope-fzf-native.nvim]], true)
   require("packer.load")({"telescope-fzf-native.nvim"}, {}, _G.packer_plugins)
