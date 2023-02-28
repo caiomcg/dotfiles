@@ -61,12 +61,6 @@ local servers = {
   tsserver = {},
   yamlls = {},
 
-  sumneko_lua = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
 }
 
 --
