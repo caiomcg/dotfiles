@@ -93,7 +93,25 @@ function packer.trytoconfigure()
     use 'chentoast/marks.nvim'
 
     -- Startup
-    use { "glepnir/dashboard-nvim", event = "VimEnter",
+    use { "glepnir/dashboard-nvim", event = "VimEnter" }
+
+    -- Leap
+    use {
+      "ggandor/leap.nvim",
+      config = function()
+        require("leap").add_default_mappings(true)
+      end,
+    }
+    -- Flit (Better F/T)
+    use {
+      'ggandor/flit.nvim',
+      config = function ()
+        require('flit').setup {
+          keys = { f = 'f', F = 'F', t = 't', T = 'T' },
+          labeled_modes = "v",
+          multiline = true,
+        }
+      end,
     }
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
