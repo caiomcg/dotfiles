@@ -15,15 +15,23 @@ function packer.trytoconfigure()
     -- Package manager
     use 'wbthomason/packer.nvim'
 
+    -- Make fidget standalone to avoid errors
+    use {
+      'j-hui/fidget.nvim',
+      tag = 'legacy',
+      config = function()
+        require("fidget").setup {
+          -- options
+        }
+      end,
+    }
+
     use { -- LSP Configuration & Plugins
       'neovim/nvim-lspconfig',
       requires = {
         -- Automatically install LSPs to stdpath for neovim
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-
-        -- Useful status updates for LSP
-        'j-hui/fidget.nvim',
 
         -- Additional lua configuration, makes nvim stuff amazing
         'folke/neodev.nvim',
