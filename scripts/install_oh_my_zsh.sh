@@ -5,9 +5,25 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 mkdir -p ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
 mkdir -p ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins
 
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# Plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-sudo git clone https://github.com/caiomcg/gruvbox-zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/gruvbox
-sudo mv ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/gruvbox/*.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
-sudo rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/gruvbox
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-completions \
+    ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+git clone https://github.com/zdharma/fast-syntax-highlighting.git \
+    ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+
+# Themes
+git clone https://github.com/caiomcg/gruvbox-zsh-theme \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
+
+git clone https://github.com/denysdovhan/spaceship-prompt.git \
+    "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" \
+    "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
