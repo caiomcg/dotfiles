@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.o.autoindent = true
 
 -- Disable mouse mode
-vim.o.mouse=a
+vim.o.mouse=""
 
 -- Remove swap files
 vim.o.swapfile=false
@@ -33,11 +33,6 @@ vim.o.smartcase = true
 vim.o.updatetime = 50
 vim.wo.signcolumn = 'yes'
 
--- Set colorscheme
-vim.o.termguicolors = true
--- vim.cmd [[colorscheme onedark]]
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
 
 -- Tabs
 vim.opt.tabstop = 4
