@@ -15,7 +15,6 @@ source scripts/install_docker.sh
 # Copy default configurations
 cp -r .config ~/.config/
 cp .tmux.conf ~/
-cp .tmux.conf ~/
 cp .gitconfig ~/
 
 # Set ZSH as default shell
