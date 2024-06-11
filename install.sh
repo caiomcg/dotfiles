@@ -13,8 +13,9 @@ source scripts/install_nvm.sh
 source scripts/install_docker.sh
 
 # Copy default configurations
-cp .tmux.conf ~/
 cp -r .config ~/.config/
+cp .tmux.conf ~/
+cp .tmux.conf ~/
 cp .gitconfig ~/
 
 # Set ZSH as default shell
