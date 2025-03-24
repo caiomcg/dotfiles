@@ -1,0 +1,4 @@
+-- Enable vim-surround
+return {
+  "tpope/vim-surround"
+}
